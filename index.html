@@ -604,6 +604,44 @@
       .env-letter .l-icon { font-size: 36px; margin-bottom: 10px; }
       .env-letter .l-body { margin-bottom: 24px; }
     }
+
+    /* ===== MAP CARD ===== */
+    .map-card {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 720px; margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      border-left: 6px solid #34a853;
+      box-shadow: var(--shadow-lg);
+      padding: 24px 28px;
+      text-decoration: none; color: inherit;
+      gap: 16px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .map-card:hover { transform: translateY(-3px); box-shadow: 0 12px 48px rgba(0,0,0,0.18); }
+    .map-card-left { display: flex; align-items: center; gap: 18px; flex: 1; min-width: 0; }
+    .map-pin-icon { font-size: 2.4rem; flex-shrink: 0; }
+    .map-card-text { min-width: 0; }
+    .map-card-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 700; color: var(--ocean-deep);
+      margin-bottom: 6px;
+    }
+    .map-card-desc {
+      font-size: clamp(0.8rem, 2vw, 0.95rem);
+      color: var(--text-mid); line-height: 1.6;
+    }
+    .map-card-arrow {
+      font-size: 1.6rem; color: #34a853;
+      font-weight: 700; flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+    .map-card:hover .map-card-arrow { transform: translateX(4px); }
+    @media (max-width: 600px) {
+      .map-card { padding: 18px 18px; gap: 12px; }
+      .map-pin-icon { font-size: 2rem; }
+    }
   </style>
 </head>
 <body class="locked">
@@ -925,6 +963,23 @@
     </section>
   </div>
 
+
+  <!-- ==================== MAP ==================== -->
+  <div class="bg-sand">
+    <section style="padding: 48px 20px;">
+      <a href="https://maps.app.goo.gl/xZwwNFu8fQYndN5s9?g_st=i" target="_blank" rel="noopener"
+         class="map-card reveal">
+        <div class="map-card-left">
+          <div class="map-pin-icon">📍</div>
+          <div class="map-card-text">
+            <div class="map-card-title">宮古島マップ</div>
+            <div class="map-card-desc">まいちゃんの作ったリストに、いく予定のところなどなど追加したから見てねーー！！</div>
+          </div>
+        </div>
+        <div class="map-card-arrow">→</div>
+      </a>
+    </section>
+  </div>
 
   <!-- ==================== SPOTS ==================== -->
   <div class="bg-alt">
